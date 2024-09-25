@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adicionar Livro</title>
+    <link rel="stylesheet" href="../CSS/beleza.css">
 </head>
 <body>
-    
+
+    <h1>Adicionar Livro</h1>
+    <form id="formulario" onsubmit="adicionarLivro(event)">
+        <input type="text" id="titulo" placeholder="Título" required>
+        <input type="text" id="autor" placeholder="Autor" required>
+        <input type="number" id="ano" placeholder="Ano" required>
+        <input type="text" id="genero" placeholder="Gênero" required>
+        <button type="submit">Adicionar</button>
+    </form>
+    <a href="../Index.html"><button >Voltar</button></a>
+
+    <script src="../JS/biblioteca.js"></script>
 </body>
 </html>
