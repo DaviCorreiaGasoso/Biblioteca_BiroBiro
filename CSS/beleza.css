@@ -1,10 +1,86 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 50px;
+    background-image: url('/Imagens/fundo.jpeg'); /* Caminho para a imagem */
+    background-size: cover; /* Faz com que a imagem cubra todo o fundo */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-attachment: fixed; /* Fixa a imagem ao fundo */
+    margin: 0; /* Remove margens para um layout mais limpo */
+    padding: 0; /* Remove espaçamento para um layout mais limpo */
 }
 button {
     padding: 10px 20px;
     margin: 10px;
-    font-size: 16px;
+    font-size: 19px;
+    border-radius: 50px;
+    flex: 0px;
+    margin-top: 10px;
+    background-color: rgb(94, 56, 0);
+    color: white;
+    animation: fadeIn 2.5s ease-in forwards; 
+}
+h1{
+    margin-top: 50px;
+    padding: 100px;
+    font-size: 56px;
+    color: rgb(212, 206, 206); 
+    animation: fadeIn 2s ease-in forwards; 
+}
+.acervo-vazio {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(236, 236, 236);
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in forwards; 
+}
+.livro {
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Borda sutil para os livros */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    color: #fff; /* Cor do texto */
+    margin: 15px auto; /* Espaçamento entre os itens */
+    padding: 15px; /* Espaçamento interno */
+    width: 80%; /* Largura dos livros */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar destaque */
+    animation: fadeIn 1.5s ease-in forwards; /* Animação de entrada */
+}
+
+/* Estilo para os títulos dentro do div de cada livro */
+.livro strong {
+    font-size: 18px; /* Tamanho do texto dos títulos */
+    color: rgb(255, 215, 0); /* Cor amarela dourada para destacar */
+}
+
+/* Estilo para os detalhes dos livros */
+.livro br + strong {
+    margin-top: 10px; /* Espaçamento entre os elementos */
+}
+
+/* Estilo para a linha de separação entre os livros */
+.livro hr {
+    border: none; /* Remove a borda padrão */
+    height: 1px; /* Altura da linha */
+    background-color: rgba(255, 255, 255, 0.2); /* Cor semi-transparente */
+    margin: 10px 0; /* Espaçamento vertical */
+}
+
+.formulario_padrao {
+    height: 100px;
+    padding: 20px;
+}
+
+input {
+    height: 40px;
+    padding: 5px;
+    border-radius: 50px;
 }

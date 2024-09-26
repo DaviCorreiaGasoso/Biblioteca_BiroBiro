@@ -25,7 +25,7 @@ class Biblioteca {
 
         localStorage.setItem('biblioteca', JSON.stringify(this.biblioteca)); // Salva no localStorage
 
-        alert(`O livro "${titulo}" foi adicionado ao acervo.`);
+        alert('O livro "${titulo}" foi adicionado ao acervo.');
         document.getElementById('formulario').reset();
     }
 
@@ -34,7 +34,7 @@ class Biblioteca {
         acervoDiv.innerHTML = ''; // Limpa a área antes de exibir
 
         if (this.biblioteca.length === 0) {
-            acervoDiv.innerHTML = '<p>O nosso acervo está vazio.</p>';
+            acervoDiv.innerHTML = '<p class="acervo-vazio">O nosso acervo está vazio.</p>';
         } else {
             this.biblioteca.forEach(livro => {
                 const livroDiv = document.createElement('div');
@@ -43,12 +43,13 @@ class Biblioteca {
                     <strong>Título:</strong> ${livro.titulo} <br>
                     <strong>Autor:</strong> ${livro.autor} <br>
                     <strong>Ano:</strong> ${livro.anoPublicacao} <br>
-                    <strong>Gênero:</strong> ${livro.genero} <br>
+                    <strong>Gênero:</strong> ${livro.genero}
                     <hr>
                 `;
                 acervoDiv.appendChild(livroDiv);
             });
         }
+        
     }
 
     excluirLivro(titulo) {
@@ -56,9 +57,9 @@ class Biblioteca {
         if (indice !== -1) {
             this.biblioteca.splice(indice, 1);
             localStorage.setItem('biblioteca', JSON.stringify(this.biblioteca)); // Atualiza o localStorage
-            alert(`O livro "${titulo}" foi excluído do acervo.`);
+            alert('O livro "${titulo}" foi excluído do acervo.');
         } else {
-            alert(`O livro "${titulo}" não encontrado no acervo.`);
+            alert('O livro "${titulo}" não encontrado no acervo.');
         }
     }
 }
