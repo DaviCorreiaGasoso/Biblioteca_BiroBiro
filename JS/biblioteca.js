@@ -25,7 +25,7 @@ class Biblioteca {
 
         localStorage.setItem('biblioteca', JSON.stringify(this.biblioteca)); // Salva no localStorage
 
-        alert('O livro "${titulo}" foi adicionado ao acervo.');
+        alert(`O livro "${titulo}" foi adicionado ao acervo.`);
         document.getElementById('formulario').reset();
     }
 
@@ -57,9 +57,9 @@ class Biblioteca {
         if (indice !== -1) {
             this.biblioteca.splice(indice, 1);
             localStorage.setItem('biblioteca', JSON.stringify(this.biblioteca)); // Atualiza o localStorage
-            alert('O livro "${titulo}" foi excluído do acervo.');
+            alert(`O livro "${titulo}" foi excluído do acervo.`);
         } else {
-            alert('O livro "${titulo}" não encontrado no acervo.');
+            alert(`O livro "${titulo}" não encontrado no acervo.`);
         }
     }
 }
